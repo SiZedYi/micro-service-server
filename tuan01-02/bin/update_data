@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Xóa file db.sqlite3 sau đso tạo lại
+python3 manage.py migrate
+python3 manage.py createsuperuser
+admin
+admin
+python3 manage.py runserver
+# Tạo user sau đó login vào tạo tài khoản địa phương
+# login tk lấy token
+# past token xuống để gọi api
