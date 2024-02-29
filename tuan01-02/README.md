@@ -1,10 +1,10 @@
 # Ảnh demo
 
 ## Product
-![Product demo](/img/product.png)
+![Product demo](https://i.imgur.com/JUrZvw2.png)
 
 ##User
-![User demo](/img/user.png)
+![User demo](https://i.imgur.com/o8RkhwZ.png)
 
 
 # Install
