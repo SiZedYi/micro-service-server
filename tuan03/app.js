@@ -8,9 +8,9 @@ const passport = require('./modules/passport')
 const mongoose = require('mongoose')
 const flash = require('connect-flash')
 
-const dbHost = process.env.DB_HOST || 'localhost'
-const dbPort = process.env.DB_PORT || 27017
-const dbName = process.env.DB_NAME || 'my_db_name'
+const dbHost = 'localhost'
+const dbPort =  27017
+const dbName =  'my_db_name'
 const mongoUrl = `mongodb://${dbHost}:${dbPort}/${dbName}`
 
 const connectWithRetry = function () { // when using with docker, at the time we up containers. Mongodb take few seconds to starting, during that time NodeJS server will try to connect MongoDB until success.
