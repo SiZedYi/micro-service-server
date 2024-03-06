@@ -53,6 +53,7 @@ Với 1 vài dữ liệu nhỏ có thể thấy:
 ## Hướng dẫn chạy
 
 - Truy cập file app.js sau đó sửa các giá trị:
+
   ![Img](https://i.imgur.com/oKzROgk.png)
   - dbHost sẽ là host của mongo
   - dbPort sẽ là port mongo
