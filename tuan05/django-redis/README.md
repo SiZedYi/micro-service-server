@@ -19,7 +19,7 @@
 
 - Get Product
 
-![Get Product](https://i.imgur.com/uobTePx.png)
+![Get Product](https://i.imgur.com/DhNPend.png)
 
 # Install
 ### CMD
