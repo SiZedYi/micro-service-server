@@ -1,0 +1,44 @@
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedHeaders: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+      routes:
+        - id: product
+          uri: http://localhost:8801
+          predicates:
+            - Path=/api/**
+          filters:
+          - name: Retry
+            args:
+              retries: 3
+              statuses: INTERNAL_SERVER_ERROR
+              methods: GET
+              backoff:
+                firstBackoff: 1000ms
+                maxBackoff: 5000ms
+                factor: 2
+                basedOnPreviousValue: false
+        - id: user
+          uri: http://localhost:8000
+          predicates:
+            - Path=/api/**
+          filters:
+          - name: Retry
+            args:
+              retries: 3
+              statuses: INTERNAL_SERVER_ERROR
+              methods: GET
+              backoff:
+                firstBackoff: 10ms
+                maxBackoff: 50ms
+                factor: 2
+                basedOnPreviousValue: false
